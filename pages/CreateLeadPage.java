@@ -10,18 +10,18 @@ public class CreateLeadPage extends ProjectSpecificMethod{
         this.driver=driver;
     }
 	
-    public CreateLeadPage enterCompanyName() {
-        driver.findElement(By.id("createLeadForm_companyName")).sendKeys("TestLeaf");
+    public CreateLeadPage enterCompanyName(String companyname) {
+        driver.findElement(By.id("createLeadForm_companyName")).sendKeys(companyname);
         return this;
         
     }
-    public CreateLeadPage enterFirstName() {
-        driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Aji");
+    public CreateLeadPage enterFirstName(String firstname) {
+        driver.findElement(By.id("createLeadForm_firstName")).sendKeys(firstname);
         return this;
         
     }
-    public CreateLeadPage enterLastName() {
-        driver.findElement(By.id("createLeadForm_lastName")).sendKeys("Christilin");
+    public CreateLeadPage enterLastName(String lastname) {
+        driver.findElement(By.id("createLeadForm_lastName")).sendKeys(lastname);
         return this;
     }
     public ViewLeadPage ClickCreateLeadButton() {

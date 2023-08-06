@@ -13,8 +13,8 @@ public class EditLeadPage extends ProjectSpecificMethod {
 		driver.findElement(By.id("updateLeadForm_companyName")).clear();
 		return this;
 	}
-	public EditLeadPage enterCompanyName() {
-		driver.findElement(By.id("updateLeadForm_companyName")).sendKeys("TCS");
+	public EditLeadPage enterCompanyName(String companyname) {
+		driver.findElement(By.id("updateLeadForm_companyName")).sendKeys(companyname);
 		return this;
 	}
 	public ViewLeadPage clickUpdateButton() {

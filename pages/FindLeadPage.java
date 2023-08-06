@@ -18,8 +18,8 @@ public class FindLeadPage extends ProjectSpecificMethod {
 		driver.findElement(By.xpath("//span[text()='Phone']")).click();
 		return this;
 	}
-	public FindLeadPage enterPhoneNumber() {
-		driver.findElement(By.xpath("//input[@name='phoneNumber']")).sendKeys("99");
+	public FindLeadPage enterPhoneNumber(String phonenumber) {
+		driver.findElement(By.xpath("//input[@name='phoneNumber']")).sendKeys(phonenumber);
 		return this;
 	}
 	public FindLeadPage clickFindLead() {

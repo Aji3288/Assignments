@@ -1,16 +1,28 @@
 package testcase;
 
+import java.io.IOException;
+
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import base.ProjectSpecificMethod;
 import pages.LoginPage;
 
-public class MergeLeadTest extends ProjectSpecificMethod {	
-	@Test		
-	public void runMergeLead() throws InterruptedException {
+public class MergeLeadTest extends ProjectSpecificMethod {
+	@BeforeTest
+	public void setUp() {
+		fileName = "MergeLead";
+		testName="MergeLead Test";
+        testDescription="MergeLead application";
+        testCategory ="MergeLead Functional";
+        testAuthor ="Aji Christilin P C";
+	}
+	
+	@Test(dataProvider = "fetchData")		
+	public void runMergeLead(String username,String password) throws InterruptedException, IOException {
 		LoginPage lp =new LoginPage(driver);
-		lp.enterUserName()
-        .enterPassword()
+		lp.enterUserName(username)
+        .enterPassword(password)
         .clickLogin()
         .clickCRMSFA()
         .clickLeads() 
